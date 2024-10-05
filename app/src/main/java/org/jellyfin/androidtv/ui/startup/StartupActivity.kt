@@ -46,6 +46,9 @@ import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import timber.log.Timber
 import java.util.UUID
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import kotlinx.coroutines.*
 
 class StartupActivity : FragmentActivity() {
 	companion object {
@@ -92,6 +95,15 @@ class StartupActivity : FragmentActivity() {
 
 		// Ensure basic permissions
 		networkPermissionsRequester.launch(arrayOf(Manifest.permission.INTERNET, Manifest.permission.ACCESS_NETWORK_STATE))
+
+		// Wecke Unraid
+		val client = OkHttpClient()
+		val request = Request.Builder()
+			.url("http://192.168.1.3:7777/?cmd=poweron&mac=04:42:1A:28:B4:51")
+			.build()
+		GlobalScope.launch(Dispatchers.IO) {
+			client.newCall(request).execute()
+		}
 	}
 
 	override fun onResume() {
