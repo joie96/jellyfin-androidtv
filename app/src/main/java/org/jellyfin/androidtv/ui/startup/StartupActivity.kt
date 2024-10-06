@@ -101,8 +101,16 @@ class StartupActivity : FragmentActivity() {
 		val request = Request.Builder()
 			.url("http://192.168.1.3:7777/?cmd=poweron&mac=04:42:1A:28:B4:51")
 			.build()
-		GlobalScope.launch(Dispatchers.IO) {
-			client.newCall(request).execute()
+		try {
+			GlobalScope.launch(Dispatchers.IO) {
+				try {
+					client.newCall(request).execute()
+				} catch (e: Exception) {
+					e.printStackTrace()
+				}
+			}
+		} catch (e: Exception) {
+			e.printStackTrace()
 		}
 	}
 
