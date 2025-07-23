@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Farben für das Wassermelonen-Thema -->
+    <color name="theme_watermelon_light">#FF6F61</color> <!-- Helles Rot -->
+    <color name="theme_watermelon_dark">#BF3A30</color>  <!-- Dunkleres Rot -->
+    <color name="theme_watermelon_black">#000000</color>  <!-- Schwarzer Farbton (optional) -->
+
+    <style name="Theme.Jellyfin.Watermelon" parent="Theme.Jellyfin">
+        <item name="android:colorPrimary">@color/theme_watermelon_dark</item>
+        <item name="android:colorPrimaryDark">@color/theme_watermelon_dark</item>
+        <item name="android:colorAccent">@color/theme_watermelon_light</item>
+        <item name="defaultBackground">@drawable/theme_watermelon_bg_1</item> <!-- Hier auf dein neues Gradient-Drawable verweisen -->
+        <item name="defaultSearchColor">@color/theme_watermelon_light</item>
+        <item name="progressPrimary">@color/theme_watermelon_light</item>
+        <item name="progressSecondary">@color/theme_watermelon_dark</item>
+        <item name="popupMenuBackground">@color/theme_watermelon_black</item>
+        <!-- Control icons -->
+        <item name="controlIconBackground">@color/theme_watermelon_black</item>
+        <item name="controlIconForegroundActive">@color/theme_watermelon_light</item>
+        <item name="controlIconForegroundInactive">@color/theme_watermelon_dark</item>
+        <!-- QR drawables -->
+        <item name="qrForeground">@color/theme_watermelon_dark</item>
+        <!-- Tile colors -->
+        <item name="tile_search_bg">@color/theme_watermelon_light</item>
+        <item name="tile_suggestions_bg">@color/theme_watermelon_light</item>
+        <item name="tile_actors_bg">@color/theme_watermelon_light</item>
+        <item name="tile_artists_bg">@color/theme_watermelon_light</item>
+        <item name="tile_audio_bg">@color/theme_watermelon_light</item>
+        <item name="tile_chapter_bg">@color/theme_watermelon_light</item>
+        <item name="tile_genres_bg">@color/theme_watermelon_light</item>
+        <item name="tile_letters_bg">@color/theme_watermelon_light</item>
+        <item name="tile_land_folder_bg">@color/theme_watermelon_light</item>
+        <item name="tile_land_photo_bg">@color/theme_watermelon_light</item>
+        <item name="tile_land_series_timer_bg">@color/theme_watermelon_light</item>
+        <item name="tile_land_tv_bg">@color/theme_watermelon_light</item>
+        <item name="tile_port_time_bg">@color/theme_watermelon_light</item>
+        <item name="tile_port_tv_bg">@color/theme_watermelon_light</item>
+        <item name="tile_port_video_bg">@color/theme_watermelon_light</item>
+        <item name="tile_port_folder_bg">@color/theme_watermelon_light</item>
+        <item name="tile_port_grid_bg">@color/theme_watermelon_light</item>
+        <item name="tile_port_guide_bg">@color/theme_watermelon_light</item>
+        <item name="tile_port_person_bg">@color/theme_watermelon_light</item>
+        <item name="tile_port_series_timer_bg">@color/theme_watermelon_light</item>
+    </style>
+</resources>
