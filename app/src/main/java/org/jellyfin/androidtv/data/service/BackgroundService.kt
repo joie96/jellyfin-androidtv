@@ -107,7 +107,8 @@ class BackgroundService(
 		loadBackgroundsJob = scope.launch(Dispatchers.IO) {
 			_backgrounds = backdropUrls.mapNotNull { url ->
 				imageLoader.execute(
-					request = ImageRequest.Builder(context).data(url).build()
+					//request = ImageRequest.Builder(context).data(url).build()
+					request = ImageRequest.Builder(context).data(url+"&blur=30").build()
 				).image?.toBitmap()?.asImageBitmap()
 			}
 
